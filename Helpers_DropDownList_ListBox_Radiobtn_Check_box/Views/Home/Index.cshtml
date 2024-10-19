@@ -1,0 +1,31 @@
+﻿@model Helpers_DropDownList_ListBox_Radiobtn_Check_box.Models.Students
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>DropDownList</h1>
+        @using (@Html.BeginForm())
+        {
+            @Html.DropDownListFor(X => X.CName, new SelectList(ViewBag.std1))
+            <br />
+            @Html.DropDownList("Cnmae", new SelectList(ViewBag.std1))
+            <br />
+
+            @Html.DropDownListFor(x => x.CName, new SelectList(ViewBag.std, "Id", "CName"), "***select course please***")
+            <br />
+            <input type="submit" Value="Save" />
+
+
+        }
+    </div>
+</body>
+</html>
